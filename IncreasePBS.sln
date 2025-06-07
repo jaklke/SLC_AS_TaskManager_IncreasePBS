@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IncreasePBS", "IncreasePBS\IncreasePBS.csproj", "{B138B153-1C19-4739-B428-E601A220B6E3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Internal", "Internal", "{7FF2BAFD-361D-4424-AAA3-B9C73D7A5A13}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Code Analysis", "Code Analysis", "{51D5BB7F-77DC-4A8E-BEB0-A4A099C5623D}"
+	ProjectSection(SolutionItems) = preProject
+		Internal\Code Analysis\qaction-debug.ruleset = Internal\Code Analysis\qaction-debug.ruleset
+		Internal\Code Analysis\qaction-release.ruleset = Internal\Code Analysis\qaction-release.ruleset
+		Internal\Code Analysis\stylecop.json = Internal\Code Analysis\stylecop.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B138B153-1C19-4739-B428-E601A220B6E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B138B153-1C19-4739-B428-E601A220B6E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B138B153-1C19-4739-B428-E601A220B6E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B138B153-1C19-4739-B428-E601A220B6E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{51D5BB7F-77DC-4A8E-BEB0-A4A099C5623D} = {7FF2BAFD-361D-4424-AAA3-B9C73D7A5A13}
+	EndGlobalSection
+EndGlobal

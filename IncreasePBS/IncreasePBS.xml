@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DMSScript options="272" xmlns="http://www.skyline.be/automation">
+	<Name>IncreasePBS</Name>
+	<Description></Description>
+	<Type>Automation</Type>
+	<Author>Jan-Klaas Kesteloot</Author>
+	<CheckSets>FALSE</CheckSets>
+	<Folder>Acquisition</Folder>
+
+	<Protocols>
+		<Protocol id="1">
+			<Description>Domain</Description>
+			<Name>Skyline Squad Task Manager</Name>
+			<Version>Production</Version>
+			<DefaultElement>477/70</DefaultElement>
+		</Protocol>
+		
+	</Protocols>
+
+	<Memory>
+	</Memory>
+
+	<Parameters>
+	</Parameters>
+
+	<Script>
+		<Exe id="1" type="csharp">
+			<Value><![CDATA[[Project:IncreasePBS]]]></Value>
+			<!--<Param type="debug">true</Param>-->
+			<Message></Message>
+		</Exe>
+	</Script>
+</DMSScript>
