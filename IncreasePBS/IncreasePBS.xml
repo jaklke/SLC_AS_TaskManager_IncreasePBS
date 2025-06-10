@@ -2,8 +2,7 @@
 <DMSScript options="272" xmlns="http://www.skyline.be/automation">
 	<Name>IncreasePBS</Name>
 	<Description>
-		A DataMiner Automation script to manage PBS values of tasks in a Task Manager element. Filters tasks by state and updates PBS based on predefined rules, with safeguards to prevent system overload.
-		https://github.com/jaklke/SLC_AS_TaskManager_IncreasePBS</Description>
+		A DataMiner Automation script to manage PBS values of tasks in a Task Manager element. Filters tasks by state and updates PBS based on predefined rules, with safeguards to prevent system overload. (source: https://github.com/jaklke/SLC_AS_TaskManager_IncreasePBS)</Description>
 	<Type>Automation</Type>
 	<Author>Jan-Klaas Kesteloot</Author>
 	<CheckSets>FALSE</CheckSets>
