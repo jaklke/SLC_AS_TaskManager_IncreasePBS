@@ -88,6 +88,7 @@ namespace IncreasePBS
 			{
 				// Increase the PBS of the task by 1  
 				int currentPBS = Convert.ToInt32(row[4]);
+				int ttid = Convert.ToInt32(row[8]);
 
 				if (currentPBS < basePBS)
 				{
@@ -95,7 +96,14 @@ namespace IncreasePBS
 
 					elementEngine.SetParameterByPrimaryKey(154, Convert.ToString(row[0]), basePBS);
 
-					//todo : update the estimated time to a default value so time spent is shown on the board.
+					engine.Sleep(2000);
+
+					if (ttid == -1)
+					{
+						elementEngine.SetParameterByPrimaryKey(158, Convert.ToString(row[0]), 32); // Set to 4 days, 85% of dev tasks in last 6 months is done in less then 3.5 days
+						engine.Sleep(2000); // Sleep for 2 second to avoid overwhelming the system
+
+					}
 				}
 				else
 				{
@@ -108,16 +116,25 @@ namespace IncreasePBS
 					/*
 					 * Use the below if PBS needs to be incremented with 10. Use a scheduled task to exucte this script as often as the PBS needs to be incremented.
 					 */
-					int newPBS = currentPBS + 10;
-												  												  				
 
-					elementEngine.SetParameterByPrimaryKey(154, Convert.ToString(row[0]), newPBS);
+					
+					int newPBS = currentPBS + 10;
+
+					if (newPBS <= 1000) // The PBS is intentionally kept at or below 1000 to avoid requiring manual reduction before task updates can be made through the UI.
+					{
+						elementEngine.SetParameterByPrimaryKey(154, Convert.ToString(row[0]), newPBS);
+						engine.Sleep(2000); // Sleep for 2 second to avoid overwhelming the system
+					}
+
+					
 				}
 
-				engine.Sleep(2000); // Sleep for 2 second to avoid overwhelming the system
+				
 			}
 
-            //engine.GenerateInformation(matchingRows.Count + " tasks are currently in progress, code review or quality assurance.");
-        }
+			
+
+			//engine.GenerateInformation(matchingRows.Count + " tasks are currently in progress, code review or quality assurance.");
+		}
     }
 }
