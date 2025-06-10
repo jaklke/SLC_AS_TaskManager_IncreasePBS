@@ -55,8 +55,6 @@ namespace IncreasePBS
         {
             int basePBS = 500; // Base PBS value to start from
 
-			
-			
 			IDms dms = engine.GetDms();
 			Element elementEngine = engine.FindElementsByName(engine.GetDummy(1).ElementName).FirstOrDefault();
 			IDmsElement elementTaskmanager = dms.GetElement(engine.GetDummy(1).ElementName);
