@@ -6,8 +6,8 @@ The `IncreasePBS` script is a DataMiner Automation script designed to manage and
 ## Features  
 - Filters tasks based on their state (`In Progress`, `Code Review`, `Quality Assurance`).  
 - Updates PBS values for tasks:  
-- Sets a base PBS value if the current PBS is below the threshold.  
-- Increments PBS by 10 for tasks meeting the criteria.
+	- Sets a base PBS value if the current PBS is below the threshold.  
+	- Increments PBS by 10 for tasks meeting the criteria.
 - Updates the estimated time for tasks with a default `ttid` value (4 days). 
 - Includes safeguards to avoid overwhelming the system by introducing a delay between updates.  
 
