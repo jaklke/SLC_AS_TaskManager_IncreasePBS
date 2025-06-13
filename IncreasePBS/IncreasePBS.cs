@@ -100,7 +100,7 @@ namespace IncreasePBS
 
 					if (ttid == -1)
 					{
-						elementEngine.SetParameterByPrimaryKey(158, Convert.ToString(row[0]), 32); // Set to 4 days, 85% of dev tasks in last 6 months is done in less then 3.5 days
+						elementEngine.SetParameterByPrimaryKey(158, Convert.ToString(row[0]), 40); // Set to 4 days (TTID = 40), 85% of dev tasks in last 6 months is done in less then 3.5 days
 						engine.Sleep(2000); // Sleep for 2 second to avoid overwhelming the system
 
 					}
